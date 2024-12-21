@@ -1,0 +1,17 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    RewriteRule ^(.*)$ public/$1 [L]
+    
+</IfModule>
+
+<FilesMatch ".*">
+    Order allow,deny
+    Allow from all
+</FilesMatch>
+
+# Deny access to .htaccess file itself
+<Files .htaccess>
+    Order allow,deny
+    Deny from all
+</Files>
