@@ -78,19 +78,6 @@ h4.card-title{
                         </div>
 
                         <div class="form-group row">
-                            <label for="address" class="col-sm-3 control-label col-form-label">Address</label>
-                            <div class="col-sm-9">
-                                <input
-                                    type="text" name="address"
-                                    class="form-control"
-                                    id="address"
-                                    placeholder="Address"
-                                    value="{{ $info->address ?? '' }}"
-                                />
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
                             <label for="email" class="col-sm-3 control-label col-form-label">E-Mail</label>
                             <div class="col-sm-9">
                                 <input
@@ -117,12 +104,61 @@ h4.card-title{
                         </div>
 
                         <div class="form-group row">
-                            <label for="logo" class="col-sm-3 control-label col-form-label">Logo</label>
+                            <label for="address" class="col-sm-3 control-label col-form-label">Address</label>
                             <div class="col-sm-9">
-                                <input type="file" name="logo" class="form-control"/>
-                                <img src="{{ asset('/') }}back-end/setting/{{ $info->logo ?? '' }}" style="width:100px;height: 100px;margin-top:10px;">
+                                <input
+                                    type="text" name="address"
+                                    class="form-control"
+                                    id="address"
+                                    placeholder="Address"
+                                    value="{{ $info->address ?? '' }}"
+                                />
                             </div>
                         </div>
+
+                        <div class="form-group row">
+                            <label for="header_button_text" class="col-sm-3 control-label col-form-label">Header Button Text</label>
+                            <div class="col-sm-9">
+                                <input
+                                    type="text" name="header_button_text"
+                                    class="form-control"
+                                    id="address"
+                                    placeholder="Header Button Text"
+                                    value="{{ $info->header_button_text ?? '' }}"
+                                />
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="footer_description" class="col-sm-3 control-label col-form-label">Footer Description</label>
+                            <div class="col-sm-9">
+                                <input
+                                    type="text" name="footer_description"
+                                    class="form-control"
+                                    id="address"
+                                    placeholder="Footer Description"
+                                    value="{{ $info->footer_description ?? '' }}"
+                                />
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="header_logo" class="col-sm-3 control-label col-form-label">Header Logo</label>
+                            <div class="col-sm-9">
+                                <input type="file" name="header_logo" class="form-control" id="header_logo"/>
+                                <img src="{{ asset('/') }}back-end/setting/{{ $info->header_logo ?? '' }}" style="width:100px;height: 100px;margin-top:10px;">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="footer_logo" class="col-sm-3 control-label col-form-label">Footer Logo</label>
+                            <div class="col-sm-9">
+                                <input type="file" name="footer_logo" class="form-control" id="footer_logo"/>
+                                <img src="{{ asset('/') }}back-end/setting/{{ $info->footer_logo ?? '' }}" style="width:100px;height: 100px;margin-top:10px;">
+                            </div>
+                        </div>
+
+
                     </div>
                     <div class="border-top">
                         <div class="card-body">

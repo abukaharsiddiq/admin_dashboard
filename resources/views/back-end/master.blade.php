@@ -35,6 +35,8 @@
 
     <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
 
+    <link href="{{ asset('/') }}back-end/dist/css/jodit.min.css" rel="stylesheet">
+
 </head>
 @stack('admin-styles')
 <style>
@@ -320,8 +322,183 @@ h4.card-title{
     </a>
   </li>
 
+  <!-- hero -->
+  <li class="nav-item {{ Request::is('hero*') ? 'menu-open' : '' }}">
+    <a href="#" class="nav-link {{ Request::is('hero*') ? 'active' : '' }}">
+      <i class="nav-icon fas fa-cubes"></i>
+      <p>Hero Section <i class="fas fa-angle-left right"></i></p>
+    </a>
+    <ul class="nav nav-treeview">
+
+      <li class="nav-item">
+        <a href="{{ route('hero.create') }}" class="nav-link {{ Request::is('hero') ? 'active' : '' }}">
+          <i class="far fa-circle nav-icon"></i>
+          <p>Add Hero</p>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href="{{ route('hero.index') }}" class="nav-link {{ Request::is('hero') ? 'active' : '' }}">
+          <i class="far fa-circle nav-icon"></i>
+          <p>Manage Hero</p>
+        </a>
+      </li>
+    </ul>
+  </li>
+  <!-- hero -->
+
+  <!-- about -->
+  <li class="nav-item {{ Request::is('about*') ? 'menu-open' : '' }}">
+    <a href="#" class="nav-link {{ Request::is('about*') ? 'active' : '' }}">
+      <i class="nav-icon fas fa-cubes"></i>
+      <p>About <i class="fas fa-angle-left right"></i></p>
+    </a>
+    <ul class="nav nav-treeview">
+
+      <li class="nav-item">
+        <a href="{{ route('about.create') }}" class="nav-link {{ Request::is('about') ? 'active' : '' }}">
+          <i class="far fa-circle nav-icon"></i>
+          <p>Add About</p>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href="{{ route('about.index') }}" class="nav-link {{ Request::is('about') ? 'active' : '' }}">
+          <i class="far fa-circle nav-icon"></i>
+          <p>Manage About</p>
+        </a>
+      </li>
+    </ul>
+  </li>
+  <!-- about -->
+
+  <!-- services -->
+  <li class="nav-item {{ Request::is('service*') ? 'menu-open' : '' }}">
+    <a href="#" class="nav-link {{ Request::is('service*') ? 'active' : '' }}">
+      <i class="nav-icon fas fa-cubes"></i>
+      <p>Services <i class="fas fa-angle-left right"></i></p>
+    </a>
+    <ul class="nav nav-treeview">
+
+      <li class="nav-item">
+        <a href="{{ route('service.create') }}" class="nav-link {{ Request::is('service') ? 'active' : '' }}">
+          <i class="far fa-circle nav-icon"></i>
+          <p>Add Service</p>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href="{{ route('service.index') }}" class="nav-link {{ Request::is('service') ? 'active' : '' }}">
+          <i class="far fa-circle nav-icon"></i>
+          <p>Manage Service</p>
+        </a>
+      </li>
+    </ul>
+  </li>
+  <!-- services -->
+
+  <!-- technology -->
+  <li class="nav-item {{ Request::is('technology*') ? 'menu-open' : '' }}">
+    <a href="#" class="nav-link {{ Request::is('technology*') ? 'active' : '' }}">
+      <i class="nav-icon fas fa-cubes"></i>
+      <p>Technology <i class="fas fa-angle-left right"></i></p>
+    </a>
+    <ul class="nav nav-treeview">
+
+      <li class="nav-item">
+        <a href="{{ route('technology.create') }}" class="nav-link {{ Request::is('technology') ? 'active' : '' }}">
+          <i class="far fa-circle nav-icon"></i>
+          <p>Add Technology</p>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href="{{ route('technology.index') }}" class="nav-link {{ Request::is('technology') ? 'active' : '' }}">
+          <i class="far fa-circle nav-icon"></i>
+          <p>Manage Technology</p>
+        </a>
+      </li>
+    </ul>
+  </li>
+  <!-- technology -->
+
+  <!-- why choose -->
+  <li class="nav-item {{ Request::is('whychoose*') ? 'menu-open' : '' }}">
+    <a href="#" class="nav-link {{ Request::is('whychoose*') ? 'active' : '' }}">
+      <i class="nav-icon fas fa-cubes"></i>
+      <p>Why Choose <i class="fas fa-angle-left right"></i></p>
+    </a>
+    <ul class="nav nav-treeview">
+
+      <li class="nav-item">
+        <a href="{{ route('whychoose.create') }}" class="nav-link {{ Request::is('whychoose') ? 'active' : '' }}">
+          <i class="far fa-circle nav-icon"></i>
+          <p>Add Why Choose</p>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href="{{ route('whychoose.index') }}" class="nav-link {{ Request::is('whychoose') ? 'active' : '' }}">
+          <i class="far fa-circle nav-icon"></i>
+          <p>Manage Why Choose</p>
+        </a>
+      </li>
+    </ul>
+  </li>
+  <!-- why choose -->
+
+  <!-- stat -->
+  <li class="nav-item {{ Request::is('stat*') ? 'menu-open' : '' }}">
+    <a href="#" class="nav-link {{ Request::is('stat*') ? 'active' : '' }}">
+      <i class="nav-icon fas fa-cubes"></i>
+      <p>Stat <i class="fas fa-angle-left right"></i></p>
+    </a>
+    <ul class="nav nav-treeview">
+
+      <li class="nav-item">
+        <a href="{{ route('stat.create') }}" class="nav-link {{ Request::is('stat') ? 'active' : '' }}">
+          <i class="far fa-circle nav-icon"></i>
+          <p>Add Stat</p>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href="{{ route('stat.index') }}" class="nav-link {{ Request::is('stat') ? 'active' : '' }}">
+          <i class="far fa-circle nav-icon"></i>
+          <p>Manage Stat</p>
+        </a>
+      </li>
+    </ul>
+  </li>
+  <!-- stat -->
+
+  <!-- client -->
+  <li class="nav-item {{ Request::is('client*') ? 'menu-open' : '' }}">
+    <a href="#" class="nav-link {{ Request::is('client*') ? 'active' : '' }}">
+      <i class="nav-icon fas fa-cubes"></i>
+      <p>Client <i class="fas fa-angle-left right"></i></p>
+    </a>
+    <ul class="nav nav-treeview">
+
+      <li class="nav-item">
+        <a href="{{ route('client.create') }}" class="nav-link {{ Request::is('client') ? 'active' : '' }}">
+          <i class="far fa-circle nav-icon"></i>
+          <p>Add Client</p>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href="{{ route('client.index') }}" class="nav-link {{ Request::is('client') ? 'active' : '' }}">
+          <i class="far fa-circle nav-icon"></i>
+          <p>Manage Client</p>
+        </a>
+      </li>
+    </ul>
+  </li>
+  <!-- client -->
+
   
-  <li class="nav-item {{ Request::is('category*') ? 'menu-open' : '' }}">
+ <!--  <li class="nav-item {{ Request::is('category*') ? 'menu-open' : '' }}">
     <a href="#" class="nav-link {{ Request::is('category*') ? 'active' : '' }}">
       <i class="nav-icon fas fa-cubes"></i>
       <p>Categories <i class="fas fa-angle-left right"></i></p>
@@ -340,10 +517,10 @@ h4.card-title{
         </a>
       </li>
     </ul>
-  </li>
+  </li> -->
 
   <!-- product variant -->
-  <li class="nav-item {{ Request::is('product*') ? 'menu-open' : '' }}">
+  <!-- <li class="nav-item {{ Request::is('product*') ? 'menu-open' : '' }}">
     <a href="#" class="nav-link {{ Request::is('product*') ? 'active' : '' }}">
       <i class="nav-icon fas fa-cubes"></i>
       <p>Product Variants<i class="fas fa-angle-left right"></i></p>
@@ -378,11 +555,11 @@ h4.card-title{
       </li>
 
     </ul>
-  </li>
+  </li> -->
   <!-- product variant -->
 
   <!-- product -->
-  <li class="nav-item {{ Request::is('product*') ? 'menu-open' : '' }}">
+<!--   <li class="nav-item {{ Request::is('product*') ? 'menu-open' : '' }}">
     <a href="#" class="nav-link {{ Request::is('product*') ? 'active' : '' }}">
       <i class="nav-icon fas fa-cubes"></i>
       <p>Product <i class="fas fa-angle-left right"></i></p>
@@ -401,11 +578,11 @@ h4.card-title{
         </a>
       </li>
     </ul>
-  </li>
+  </li> -->
   <!-- product -->
 
   <!-- orders -->
-  <li class="nav-item {{ Request::is('product*') ? 'menu-open' : '' }}">
+ <!--  <li class="nav-item {{ Request::is('product*') ? 'menu-open' : '' }}">
     <a href="#" class="nav-link {{ Request::is('product*') ? 'active' : '' }}">
       <i class="nav-icon fas fa-cubes"></i>
       <p>Orders <i class="fas fa-angle-left right"></i></p>
@@ -453,8 +630,28 @@ h4.card-title{
       </li>
 
     </ul>
-  </li>
+  </li> -->
   <!-- orders -->
+
+   <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-cog"></i>
+              <p>
+                Social
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+
+              <li class="nav-item">
+                <a href="{{ route('social.create') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Social</p>
+                </a>
+              </li>
+
+            </ul>
+          </li>
 
 
         <li class="nav-item">
@@ -470,7 +667,7 @@ h4.card-title{
               <li class="nav-item">
                 <a href="{{ route('setting.create') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Manage Company</p>
+                  <p>Setting</p>
                 </a>
               </li>
 
@@ -573,6 +770,68 @@ h4.card-title{
  <script src="{{ asset('/') }}back-end/assets/extra-libs/DataTables/datatables.min.js"></script>
  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+
+ <script src="{{ asset('/') }}back-end/dist/js/jodit.min.js"></script>
+ <script src="{{ asset('/') }}back-end/dist/js/spectrum.js"></script>
+ <script src="{{ asset('/') }}back-end/dist/js/spartan-multi-image-picker-min.js"></script>
+
+ <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script>
+   $(".editor").each(function (el) {
+        var $this = $(this);
+        var buttons = $this.data("buttons");
+        buttons = !buttons
+            ? "bold,underline,italic,hr,|,ul,ol,|,align,paragraph,|,image,table,link,undo,redo"
+            : buttons;
+
+        var editor = new Jodit(this, {
+            uploader: {
+                insertImageAsBase64URI: true,
+            },
+            toolbarAdaptive: false,
+            defaultMode: "1",
+            toolbarSticky: false,
+            showXPathInStatusbar: false,
+            buttons: buttons,
+        });
+    });
+</script>
+
+ <script>
+    $(document).ready(function() {
+        $('#summernote').summernote({
+            height: 100,
+            minHeight: null, 
+            maxHeight: null,
+            focus: true
+        });
+    });
+</script>
+
+<!-- Include Toastr JS library -->
+<script>
+  
+    function confirmDelete(id) {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "Delete this item!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes',
+            cancelButtonText: 'No',
+        }).then((result) => {
+            if (result.isConfirmed) {
+                document.getElementById('deleteForm-' + id).submit();
+            }
+        })
+    }
+
+
+</script>
+
   {!! Toastr::message() !!}
     <script>
       $("#zero_config").DataTable();

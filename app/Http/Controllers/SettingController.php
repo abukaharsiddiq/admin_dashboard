@@ -26,9 +26,11 @@ class SettingController extends Controller
 	    $info->email = $request->email;
 	    $info->phone = $request->phone;
 	    $info->address = $request->address;
+	    $info->footer_description = $request->footer_description;
+	    $info->header_button_text = $request->header_button_text;
 
 	    $path = public_path('back-end/setting/');
-	    $fileFields = ['logo'];
+	    $fileFields = ['header_logo','footer_logo'];
 
 	    foreach ($fileFields as $field) {
 	        if ($request->hasFile($field)) {
@@ -62,9 +64,11 @@ class SettingController extends Controller
 	    $info->email = $request->email;
 	    $info->phone = $request->phone;
 	    $info->address = $request->address;
+		$info->footer_description = $request->footer_description;
+	    $info->header_button_text = $request->header_button_text;
 	    
 	    $path = public_path('back-end/setting/');
-	    $fileFields = ['logo'];
+		$fileFields = ['header_logo','footer_logo'];
 
 	    foreach ($fileFields as $field) {
 	        if ($request->hasFile($field)) {

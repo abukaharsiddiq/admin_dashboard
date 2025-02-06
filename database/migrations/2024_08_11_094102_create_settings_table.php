@@ -17,7 +17,10 @@ return new class extends Migration
             $table->string('email')->nullable();
             $table->string('phone')->nullable();
             $table->text('address')->nullable();
-            $table->string('logo')->nullable();
+            $table->string('header_logo')->nullable();
+            $table->string('footer_logo')->nullable();
+            $table->text('footer_description')->nullable();
+            $table->text('header_button_text')->nullable();
             $table->timestamps();
         });
     }
